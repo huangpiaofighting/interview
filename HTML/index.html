@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 语义化</title>
+</head>
+<body>
+	<!--mark-->
+	<mark>test</mark>
+	<!--scoped是H5新属性-->
+	<article>
+    <h1>Hello World</h1>
+    <style scoped>
+        p {
+ 
+        }
+        h1 {
+        	color: red;
+        }
+    </style>
+    <p>This is my text</p>
+	</article>
+
+	<article>
+	    <h1>This is awesome</h1>
+	    <p>I am some other text</p>
+	</article>
+	<!-- small标签一般使用场景是在版权信息和法律文本里使用，也可以在标题里使用标注附加信息（bootstrap中可见），但不可以用来创建副标题。 -->
+	<h1>这是标题<small>这是副标题</small></h1>
+	<!-- <figure> 标签规定独立的流内容（图像、图表、照片、代码等等）。figure 元素的内容应该与主内容相关，但如果被删除，则不应对文档流产生影响。使用<figcaption>元素为figure添加标题（caption）。 -->
+	<figure>
+	    <img src="myimage.jpg" alt="My image">
+	    <figcaption>
+	        <p>This is my self portrait.</p>
+	    </figcaption>
+	</figure>
+	<!-- <bdo> 标签可以改变文本方向 内联标签-->
+	<bdo dir="ltr">Here is some text</bdo>
+	<bdo dir="rtl">Here is some text</bdo>
+	<form action="#" method="get">
+		Username： <input type="text" name="username">
+		Keygen: <keygen name="test"/>
+		<input type="submit" name="submit">
+	</form>
+</body>
+</html>

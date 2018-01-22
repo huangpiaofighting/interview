@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="file:///D:/myself/面试/interview/Jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <!-- <h2>子选择器与后代选择器</h2>
+    <div class="left">
+        <div class="aaron">
+            <a><p>div下的第一个p元素</p></a>
+            
+            <p>div下的第2个p元素</p>
+        </div>
+        <div class="aaron">
+            <p>divaaron下的第一个p元素</p>
+            <p>divaaron下的第2个p元素</p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="imooc">
+            <article>
+                <p>div下的article下的p元素</p>
+            </article>
+        </div>
+        <div class="imooc">
+            <article>
+                <p>div下的article下的p元素</p>
+            </article>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //子选择器
+        //$('div > p') 选择所有div元素里面的子元素P 只是子元素 返回多个子元素
+        // $('div > p').css("border", "1px groove green");
+    </script>
+
+    <script type="text/javascript">
+        //后代选择器
+        //$('div  p') 选择所有div元素里面的p元素 可能是子元素还能是孙子元素
+        // $('div  p').css("border", "1px groove red");
+    </script> -->
+
+
+    <h2>相邻兄弟选择器与一般兄弟选择器</h2>
+    <div class="bottom">
+        <div>兄弟节点div, +~选择器不能向前选择</div>
+        <span class="prev">选择器span元素</span>
+        <div>span后第一个兄弟节点div</div>
+        <div>兄弟节点div
+            <div class="small">子元素div</div>
+        </div>
+        <span>兄弟节点span,不可选</span>
+        <div>兄弟节点div</div>
+    </div>
+    <div class="bottom1">
+            <div>兄弟节点div, +~选择器不能向前选择</div>
+            <span class="prev">选择器span元素</span>
+            <div>span后第一个兄弟节点div</div>
+            <div>兄弟节点div
+                <div class="small">子元素div</div>
+            </div>
+            <span>兄弟节点span,不可选</span>
+            <div>兄弟节点div</div>
+        </div>
+
+    <script type="text/javascript">
+        //相邻兄弟选择器   -- 指+号后面的元素
+        //选取prev后面的第一个的div兄弟节点
+        // $('div + .prev').css("border", "3px groove blue");
+    </script>
+
+    <script type="text/javascript">
+        //一般相邻选择器
+        //选取prev后面的所有的div兄弟节点
+        $('.bottom  .prev ~ div').css("border", "3px groove blue");
+    </script>
+
+</body>
+</html>

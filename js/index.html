@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>f</title>
+</head>
+<body>
+	<script type="text/javascript">
+		window.onerror = function(error){
+			console.log("window --- onerror!");
+		}
+	</script>
+	<script type="text/javascript">
+
+		/*创建闭包*/
+		function bibao () {
+			var i = 0;
+			return function(){
+				i++;
+				console.log("bibao",i);
+				return i;
+			};
+		}
+		var c = bibao();
+		c();
+		c();
+
+		function createFunction(){
+			var arr = new Array();
+			for(var i =0;i<10;i++){
+				arr[i] = function(){
+					return i;
+				}
+			}
+			return arr;
+		}
+		var funs = createFunction();
+		for(index in funs){ //数组的索引
+			console.log("bibao --- example：",funs[index]());
+		}
+		var obj1 = {
+			name:"zhangsan",
+			age:32,
+			sex:"boy"
+		}
+		for( item in obj1){//对象的key值
+			console.log("for in --- example:",item , "---",obj1[item]);
+		}
+		for(var i=0;i<funs.length;i++){
+			console.log("bibao --- example2：",funs[i]());
+		}
+		/*创建对象几种方法*/
+		var object ={
+			name:"zhangsan"
+		};
+		var obj = new Object();
+		var obj = Object.create(object);
+		function obj(name){
+			this.name = name
+		}
+
+		/*继承*/
+		function Person() {
+			this.name = "name";
+		}
+		Person.prototype.say = function(first_argument) {
+			console.log("Person say");
+		};
+		function Child(){
+			Person.call(this);
+			this.type = "Childtype"
+		}
+		Child.prototype = Object.create(Person.prototype);
+		Child.prototype.constructor = Child;
+		/*var 变量作用域*/
+		var foo = "hello";
+		(function (){
+			var bar = "world";
+			console.log(foo + bar);
+		})();
+		try{
+			console.log(foo + bar);
+		}catch(e){
+			console.log("代码报错！");
+		}
+	</script>
+
+</body>
+</html>
