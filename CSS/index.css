@@ -1,0 +1,54 @@
+html * {
+	padding: 0px;
+	margin: 0px;
+}
+
+.layer{
+	margin-top:10px;
+}
+
+.one .container div {
+	 min-height: 100px;
+
+}
+
+.one .left{
+	float: left;
+	width: 300px;
+	background: yellow;
+}
+.one .right {
+	float: right;
+	background: blue;
+	width: 300px;
+}
+.one .middle {
+	font-size: 20px;
+	background: red;
+
+}
+.two .container div {
+	min-height: 100px;
+
+}
+.two .container {
+	display: flex;
+	flex-direction: row-reverse;
+	clear: both;
+}
+
+.two .left {
+	width: 300px;
+	background: red;
+	order: 3;
+}
+.two .right {
+	width: 300px;
+	background: yellow;
+	order: 1;
+}
+.two .middle {
+	flex-grow:1;
+	background: blue;
+	order:2;
+}

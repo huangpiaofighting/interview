@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+	<!--左中右自适应布局-->
+	<section class="one layer">
+		<article class="container">
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="middle">
+				<h1>heello</h1>
+				左中右自适应布局 float
+			</div>
+		</article>
+	</section>
+
+	<section class="two layer">
+		<article class="container">
+			<div class="left"></div>
+			
+			<div class="middle">
+				<h1>heello</h1>
+				左中右自适应布局 flex
+			</div>
+			<div class="right"></div>
+		</article>
+	</section>
+
+	<!--文字垂直水平居中-->
+	<section class="wenzi one layer">
+		<style type="text/css">
+			.wenzi.one {
+				background: yellow;
+			}
+			.wenzi.one .center{
+				text-align: center;
+				display: table-cell;
+				vertical-align: middle;
+				width: 300px;
+				height: 100px;
+			}
+		</style>
+		<div class="center">
+			文字垂直水平居中之 table-cell
+		</div>
+	</section>
+	<section class="wenzi two layer">
+		<style type="text/css">
+			.wenzi.two {
+				background: red;
+			}
+			.wenzi.two .center{
+				text-align: center;
+				line-height: 100px;
+				width: 300px;
+				height: 100px;
+			}
+		</style>
+		<div class="center">
+			文字垂直水平居中之 line-height
+		</div>
+	</section>
+	<section class="wenzi three layer">
+		<style type="text/css">
+			.wenzi.three {
+				background: blue;
+			}
+			.wenzi.three .center{
+				text-align: center;
+				width: 300px;
+				height: 100px;
+			}
+			.wenzi.three .center:before{
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+				content: '';
+			}
+		</style>
+		<div class="center">
+			文字垂直水平居中之 :before inline-block
+		</div>
+	</section>
+	<!--选择器-->
+	
+</body>
+</html>
