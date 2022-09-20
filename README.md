@@ -34,10 +34,10 @@ Git 有三种状态，你的文件可能处于其中之一： 已提交（commit
 
 ## `git`常用配置
 
-`git config user.name`  //查看当前登录账号
-`git config user.email` //查看当前登录邮箱
-`git config --global user.name "Your_username"`  //修改用户名和邮箱
-`git config --global user.email "Your_email"`  //修改用户名和邮箱
+1. `git config user.name`  //查看当前登录账号
+2. `git config user.email` //查看当前登录邮箱
+3. `git config --global user.name "Your_username"`  //修改用户名和邮箱
+4. `git config --global user.email "Your_email"`  //修改用户名和邮箱
 
 ## 远程仓库的使用
 `git clone https://github.com/huangpiaofighting/interview.git` //克隆现有的仓库
@@ -74,3 +74,4 @@ Git 有三种状态，你的文件可能处于其中之一： 已提交（commit
 
 [在github中创建token作为密码](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
+ 
